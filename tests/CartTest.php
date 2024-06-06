@@ -4,7 +4,7 @@
     
     use PHPUnit\Framework\TestCase;
     use src\libraries\Cart;
-use src\libraries\Product;
+    use src\libraries\Product;
 
     class CartTest extends TestCase
     {
