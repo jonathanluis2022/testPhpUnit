@@ -29,4 +29,22 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: List files in src directory
+      run: dir src
+
+    - name: Verifica sintaxe do src/factory.php
+      run: php -l src/factory.php
+
+    - name: Run PHP_CodeSniffer
+      run: vendor/bin/phpcs --standard=PSR12 src/
+
+    - name: Run PHPUnit tests
+      run: vendor/bin/phpunit
+
+    - name: Run PHPStan
+      run: vendor/bin/phpstan analyse src
+
 
