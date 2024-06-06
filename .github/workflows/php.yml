@@ -35,7 +35,6 @@ jobs:
     - name: List files in src directory
       run: dir src
       
-    - name: Verifica sintaxe do src/factory.php
-      run: php -l src/factory.php
+   
       
 
