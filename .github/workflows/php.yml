@@ -46,6 +46,7 @@ jobs:
 
     - name: Run PHPStan
       run: vendor/bin/phpstan analyse src
+      
 
     - name: Verifica sintaxe do src/factory.php
       run: php -l src/factory.php
