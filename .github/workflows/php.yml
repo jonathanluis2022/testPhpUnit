@@ -35,9 +35,6 @@ jobs:
     - name: List files in src directory
       run: dir src
 
-    - name: Verifica sintaxe do src/factory.php
-      run: php -l src/factory.php
-
     - name: Run PHP_CodeSniffer
       run: vendor/bin/phpcs --standard=PSR12 src/
 
@@ -47,4 +44,6 @@ jobs:
     - name: Run PHPStan
       run: vendor/bin/phpstan analyse src
 
+    - name: Verifica sintaxe do src/factory.php
+      run: php -l src/factory.php
 
