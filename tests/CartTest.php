@@ -19,6 +19,6 @@
         {
             $cart = new Cart;
             $cart->add(new Product);
-            $this->assertNotEmpty($cart->getCart()); //verifica si o array esta vazio 
+            $this->assertNotEmpty($cart->getCart()); //verifica si o array nao esta vazio 
         }
     }
